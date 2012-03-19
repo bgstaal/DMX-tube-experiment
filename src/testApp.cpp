@@ -171,18 +171,8 @@ void testApp::draw()
 void testApp::drawVideoFrames()
 {
     ofSetColor(255, 255, 255);
-    //videoGrabber.draw(0, 0, videoGrabber.width, videoGrabber.height);
     colorFrame.draw(0, 0);
     grayImage.draw(videoGrabber.width, 0);
-    //contourFinder.draw();
-    
-    /*
-    for (int i = 0; i < contourFinder.nBlobs; i++)
-    {
-        ofSetColor(255, 0, 0);
-        contourFinder.blobs[i].draw(0, 0);
-    }
-     */
     
     biggestBlob.draw();
 
@@ -220,7 +210,7 @@ void testApp::guiEvent(ofxUIEventArgs &e)
     }
     else if (name == "threshold")
     {
-        contrast = value;
+        threshold = value;
     }
     else if (name == "minBlobSize")
     {
@@ -253,9 +243,6 @@ void testApp::mouseMoved(int x, int y )
     hRatio = (float)x / ofGetWidth();
     if (hRatio > 1) hRatio = 1;
     if (hRatio < 0) hRatio = 0;
-    
-    //currentIndex = (NUM_LED_POINTS-1) * hRatio;
-    //printf("%f\n", hRatio);
 }
 
 //--------------------------------------------------------------
