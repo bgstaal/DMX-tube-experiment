@@ -1,0 +1,5 @@
+Experiment made at @nanikawa's workshop at Resonate 2012. Uses openCV to track phone position and DMX Pro to communicate with the dmx fixture over serial port.
+------------
+Dependencies: openFrameworks,  DMXPro, ofxUI, ofxXMLSettings &  ofxOpenCV
+------------
+Video at: https://vimeo.com/38801821
